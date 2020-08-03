@@ -1,0 +1,22 @@
+name: End-to-end tests
+on: [push]
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+
+      - name: Cypress run
+        uses: cypress-io/github-action@v2
+        with:
+          #build: npm run build
+          #start: npm start
+          spec: cypress/integration/amazon.spec.js
+          wait-on: http://www.amazon.com/
+          record: true
+        env:
+          # pass the Dashboard record key as an environment variable
+          HELLO_TEST: ${{ secrets.HELLO_TEST }}
+          # pass GitHub token to allow accurately detecting a build vs a re-run build
+          #GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }
