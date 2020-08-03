@@ -7,9 +7,9 @@ describe('Searching FAANG', () => {
         cy.get('.a-size-mini > a > span').then(($lis) => {
 
             for (let i = 0; i < $lis.length; i++) {
-                expect($lis.eq(i).text()).to.match(/Star\sTrek|Enterprise|Federation|Picard/)
+               // expect($lis.eq(i).text()).to.match(/Star\sTrek|Enterprise|Federation|Picard/)
             }
-
+            cy.log(  "${{secrets.HELLO_TEST}}")
         })
     })
 })
