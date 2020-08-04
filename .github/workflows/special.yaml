@@ -1,1 +1,1 @@
-HELLO_TEST: ${{ secrets.HELLO_TEST }}
+HELLO_TEST: ${{ secrets.CYPRESS_RECORD_KEY }}
