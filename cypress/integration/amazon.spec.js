@@ -5,7 +5,7 @@ describe('Searching FAANG', () => {
     it('Amazon', () => {
 
         cy
-            .readFile('.github/workflows/special.yaml')
+            .readFile('.github/workflows/End_To_End_tests.yaml')
             .then((str) => {
                 // parse the string into object literal
                 const data = YAML.parse(str)
