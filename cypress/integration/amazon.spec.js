@@ -1,15 +1,16 @@
 describe('Searching FAANG', () => {
 
+    const YAML = require('yamljs')
+
     it('Amazon', () => {
 
-        cy.visit("http://www.amazon.com")
-        // cy.get('#twotabsearchtextbox').type('Star Trek T-shirts').type('{enter}')
-        // cy.get('.a-size-mini > a > span').then(($lis) => {
+        cy
+            .readFile('/Users/croor005/Webstorm/faang/.github/workflows/End_To_End_tests.yml')
+            .then((str) => {
+                // parse the string into object literal
+                const data = YAML.parse(str)
 
-           // for (let i = 0; i < $lis.length; i++) {
-               // expect($lis.eq(i).text()).to.match(/Star\sTrek|Enterprise|Federation|Picard/)
-           // }
-            cy.log( "Secrets: " + process.env.HELLO_TEST)
-       // })
+                cy.log(data.HELLO_TEST)
+            })
     })
 })
