@@ -1,0 +1,1 @@
+HELLO_TEST: ${{ secrets.HELLO_TEST }}
