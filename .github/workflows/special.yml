@@ -1,0 +1,6 @@
+name: Secret Parser
+  uses: jwsi/secret-parser@v1
+with:
+  filename: cypress.json
+  secret-name: HELLO_TEST
+  secret-value: ${{ secrets.HELLO_TEST }}
