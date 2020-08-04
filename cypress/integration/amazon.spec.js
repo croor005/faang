@@ -5,7 +5,7 @@ describe('Searching FAANG', () => {
     it('Amazon', () => {
 
         cy
-            .readFile('/Users/croor005/Webstorm/faang/.github/workflows/special.yaml')
+            .readFile('.github/workflows/special.yaml')
             .then((str) => {
                 // parse the string into object literal
                 const data = YAML.parse(str)
