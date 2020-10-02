@@ -4,12 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "cypress:open": "cypress open"
+    "": ""
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^4.12.0",
-    "yamljs": "^0.3.0"
-  }
+    "allure-commandline": "^2.13.0"
+  },
+  "dependencies": {}
 }

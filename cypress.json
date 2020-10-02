@@ -1,6 +1,0 @@
-{
-  "env": {
-    "HELLO_TEST": "${{ secrets.HELLO_TEST }}"
-  },
-  "projectId": "eahg9z"
-}
