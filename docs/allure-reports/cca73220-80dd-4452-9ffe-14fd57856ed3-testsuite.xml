@@ -1,0 +1,73 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1601596971038' stop='1601597017559'>
+    <name>Account</name>
+    <title>Account</title>
+    <test-cases>
+        <test-case start='1601596971039' status='failed' stop='1601597016858'>
+            <name>C61560 Add credit card to the account @e2e @C61560 @miao</name>
+            <title>C61560 Add credit card to the account @e2e @C61560 @miao</title>
+            <labels>
+                <label name='tag' value='@e2e'/>
+                <label name='tag' value='@C61560'/>
+                <label name='tag' value='@miao'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1601596983082' status='passed' stop='1601596985057'>
+                    <name>Given I am on the account page </name>
+                    <title>Given I am on the account page </title>
+                    <attachments/>
+                    <steps>
+                        <step start='1601596983082' status='passed' stop='1601596985052'>
+                            <name>I am on page "/account"</name>
+                            <title>I am on page "/account"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1601596985052' status='passed' stop='1601596985054'>
+                            <name>I wait in url "/account", 5</name>
+                            <title>I wait in url "/account", 5</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1601596985054' status='passed' stop='1601596985056'>
+                            <name>I wait for text "Profile", 5</name>
+                            <title>I wait for text "Profile", 5</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1601596985057' status='failed' stop='1601597016858'>
+                    <name>When I add a valid payment card </name>
+                    <title>When I add a valid payment card </title>
+                    <attachments/>
+                    <steps>
+                        <step start='1601596985057' status='passed' stop='1601596986855'>
+                            <name>I am on page "/account"</name>
+                            <title>I am on page "/account"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1601596986855' status='failed' stop='1601597016857'>
+                            <name>I wait for element {"css":".add-card"}, 30</name>
+                            <title>I wait for element {"css":".add-card"}, 30</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Last Seen Screenshot' source='2f3d282d-4406-4889-b15f-ceb8d59deba8-attachment.png' type='image/png' size='161668'/>
+            </attachments>
+            <failure>
+                <message>element ({css: .add-card}) still not present on page after 30 sec
+                waiting for selector ".add-card" failed: timeout 30000ms exceeded</message>
+                <stack-trace>Error: element ({css: .add-card}) still not present on page after 30 sec
+                waiting for selector ".add-card" failed: timeout 30000ms exceeded
+                    at /home/circleci/order_end2end_test/node_modules/codeceptjs/lib/helper/Puppeteer.js:1867:13</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
